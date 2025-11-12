@@ -22,7 +22,7 @@ A PHP tool that converts database table definitions in JSON format to SQL CREATE
 ## Installation
 
 ```bash
-composer install
+composer install mathsgod/json-to-sql
 ```
 
 ## Usage
