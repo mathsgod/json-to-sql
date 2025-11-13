@@ -2,6 +2,8 @@
 
 class JsonToSql
 {
+
+
     /**
      * 將 JSON 檔案轉換為 SQL CREATE TABLE 語句
      */
@@ -25,7 +27,7 @@ class JsonToSql
     /**
      * 生成單個表的 CREATE TABLE 語句
      */
-    private function generateCreateTableStatement(array $table): string
+    public function generateCreateTableStatement(array $table): string
     {
         $tableName = $table['name'] ?? '';
         if (empty($tableName)) {
@@ -131,7 +133,7 @@ class JsonToSql
             if (str_contains($def, "DEFAULT NULL")) {
                 $def = str_replace("DEFAULT NULL", "", $def);
             }
-            
+
             $def .= " DEFAULT '{$column['default']}'";
         }
 
